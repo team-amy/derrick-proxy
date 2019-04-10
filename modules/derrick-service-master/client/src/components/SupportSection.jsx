@@ -14,7 +14,7 @@ class SupportSection extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/1')
+    fetch(`/support${window.location.pathname}`)
     .then(response => {
       return response.json()
     })
