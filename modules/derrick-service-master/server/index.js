@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const User = require('../database/index.js');
 const PORT = 3003;
 
+app.use(cors());
 app.use('/', express.static(__dirname + '/../client/dist'))
 app.use('/:id', express.static(__dirname + '/../client/dist'));
 
