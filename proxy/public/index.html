@@ -18,6 +18,12 @@
   <script src="http://localhost:3003/bundle.js"></script>
   <script>
       ReactDOM.render(
+        React.createElement(Music),
+        document.getElementById('MediaPlayer')
+      );
+  </script>
+  <script>
+      ReactDOM.render(
         React.createElement(SupportSection),
         document.getElementById('SupportedBy')
       );
