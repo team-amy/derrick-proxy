@@ -1,98 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>bandland</title>
-  <style>
-    .center {
-      display: flex;
-      background-color: #3858ad;
-      width: 756px;
-      min-height: 100%;
-      margin: 0 auto;
-    }
+  <head>
 
-    .mainAlbumArt {
-      padding-top: 20px;
-    }
-    .container {
-      display: inline-block;
-      align-content: center;
-    }
+    <title>bandland</title>
 
-    .share {
-      font: bold 12px Helvetica Neue, sans-serif;
-      color: #6591e2;
-      text-decoration: none;
-      padding-right: 20px;
-    }
+    <style>
 
-    .wishlist {
-      font: bold 12px Helvetica Neue, sans-serif;
-      color: #6591e2;
-      text-decoration: none;
-    }
+      .center {
+        display: flex;
+        background-color: #3858ad;
+        width: 756px;
+        min-height: 100%;
+        margin: 0 auto;
+      }
 
-    .share:hover, .wishlist:hover {
-      text-decoration: underline;
-    }
+      .mainAlbumArt {
+        padding-top: 20px;
+      }
 
-    .underArtLinks {
-      padding-bottom: 20px;
-    }
+      .share {
+        font: bold 12px Helvetica Neue, sans-serif;
+        color: #6591e2;
+        text-decoration: none;
+        padding-right: 20px;
+      }
 
-    .supportSection {
-      padding-bottom: 10px;
-    }
-  </style>
+      .wishlist {
+        font: bold 12px Helvetica Neue, sans-serif;
+        color: #6591e2;
+        text-decoration: none;
+      }
 
-  <link rel="stylesheet" type="text/css" media="screen" href="./mainStyle.css">
-  <link rel="stylesheet" type="text/css" media="screen" href="http://localhost:3001/reset.css">
-  <link rel="stylesheet" type="text/css" media="screen" href="http://localhost:3001/main.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" media="screen" href="http://localhost:3003/style.css">
-</head>
-<body style= "background: #E9D3B3">
-  <div class="center">
-    <div class="container" id="MediaPlayer"></div>
+      .share:hover, .wishlist:hover {
+        text-decoration: underline;
+      }
 
-    <div class="container">
-        <img class="mainAlbumArt"
-        height="350px"
-        width="350px"
-        src="https://s3.us-east-2.amazonaws.com/id12c4xzkv5chxzkcv4/supportersPictures/albumart.jpg">
-        <br>
-        <div class="underArtLinks">
-        <a class="share" href="">Share / Embed</a>
-        <a class="wishlist" href="">Wishlist</a>
+      .underArtLinks {
+        padding-bottom: 20px;
+      }
+
+      .supportSection {
+        padding-bottom: 10px;
+      }
+
+    </style>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="./mainStyle.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://localhost:3001/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://localhost:3001/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://localhost:3003/style.css">
+  </head>
+  <body style= "background: #E9D3B3">
+    <div class="center">
+      <div id="MediaPlayer"></div>
+        <div>
+          <img class="mainAlbumArt"
+          height="350px"
+          width="350px"
+          src="https://s3.us-east-2.amazonaws.com/id12c4xzkv5chxzkcv4/supportersPictures/albumart.jpg">
+          <br>
+          <div class="underArtLinks">
+          <a class="share" href="">Share / Embed</a>
+          <a class="wishlist" href="">Wishlist</a>
+          </div>
+          <div class="supportSection" id="SupportedBy"></div>
         </div>
-        <div class="supportSection" id="SupportedBy"></div>
     </div>
-  </div>
 
-  <div class="related" id="RelatedAlbums"></div>
+    <div class="related" id="RelatedAlbums"></div>
 
-  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-  <script src="http://localhost:3001/bundle.js"></script>
-  <script src="http://localhost:3002/bundle.js"></script>
-  <script src="http://localhost:3003/bundle.js"></script>
-  <script>
-      ReactDOM.render(
-        React.createElement(Music),
-        document.getElementById('MediaPlayer')
-      );
-  </script>
-  <script>
-      ReactDOM.render(
-        React.createElement(SupportSection),
-        document.getElementById('SupportedBy')
-      );
-  </script>
-  <script>
-      ReactDOM.render(
-        React.createElement(RecommendedAlbumsApp),
-        document.getElementById('RelatedAlbums')
-      );
-  </script>
-</body>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="http://localhost:3001/bundle.js"></script>
+    <script src="http://localhost:3002/bundle.js"></script>
+    <script src="http://localhost:3003/bundle.js"></script>
+
+    <script>
+        ReactDOM.render(
+          React.createElement(Music),
+          document.getElementById('MediaPlayer')
+        );
+    </script>
+
+    <script>
+        ReactDOM.render(
+          React.createElement(SupportSection),
+          document.getElementById('SupportedBy')
+        );
+    </script>
+
+    <script>
+        ReactDOM.render(
+          React.createElement(RecommendedAlbumsApp),
+          document.getElementById('RelatedAlbums')
+        );
+    </script>
+  </body>
 </html>
