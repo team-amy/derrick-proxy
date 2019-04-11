@@ -2,15 +2,43 @@
 <html lang="en">
 <head>
   <title>bandland</title>
+  <style>
+  .share {
+    font: normal 12px Helvetica Neue, sans-serif;
+    color: #6591e2;
+  }
+
+  .wishlist {
+    font: normal 12px Helvetica Neue, sans-serif;
+    color: #6591e2;
+  }
+  </style>
+
+  <link rel="stylesheet" type="text/css" media="screen" href="./mainStyle.css">
   <link rel="stylesheet" type="text/css" media="screen" href="http://localhost:3001/reset.css">
   <link rel="stylesheet" type="text/css" media="screen" href="http://localhost:3001/main.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="http://localhost:3003/style.css">
 </head>
 <body style= "background: #E9D3B3">
+
   <div id="MediaPlayer"></div>
-  <div id="SupportedBy"></div>
+
+  <div class="col2">
+    <div></div>
+      <img class="mainAlbumArt"
+      height="350px"
+      width="350px"
+      src="https://s3.us-east-2.amazonaws.com/id12c4xzkv5chxzkcv4/supportersPictures/albumart.jpg">
+      <br>
+      <a class="share" href="">Share / Embed</a>
+      <a class="wishlist" href="">Wishlist</a>
+  </div>
+    <div id="SupportedBy"></div>
+  </div>
+
   <div id="RelatedAlbums"></div>
+
   <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
   <script src="http://localhost:3001/bundle.js"></script>
@@ -22,7 +50,7 @@
         document.getElementById('MediaPlayer')
       );
   </script>
-  <script class="col2">
+  <script>
       ReactDOM.render(
         React.createElement(SupportSection),
         document.getElementById('SupportedBy')
@@ -34,6 +62,5 @@
         document.getElementById('RelatedAlbums')
       );
   </script>
-  <img class="mainAlbumArt col2" height="350px" width="350px" src="https://s3.us-east-2.amazonaws.com/id12c4xzkv5chxzkcv4/supportersPictures/albumart.jpg">
 </body>
 </html>
