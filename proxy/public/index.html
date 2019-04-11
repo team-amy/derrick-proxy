@@ -3,15 +3,46 @@
 <head>
   <title>bandland</title>
   <style>
-  .share {
-    font: normal 12px Helvetica Neue, sans-serif;
-    color: #6591e2;
-  }
+    .center {
+      display: flex;
+      background-color: #3858ad;
+      width: 756px;
+      min-height: 100%;
+      margin: 0 auto;
+    }
 
-  .wishlist {
-    font: normal 12px Helvetica Neue, sans-serif;
-    color: #6591e2;
-  }
+    .mainAlbumArt {
+      padding-top: 20px;
+    }
+    .container {
+      display: inline-block;
+      align-content: center;
+    }
+
+    .share {
+      font: bold 12px Helvetica Neue, sans-serif;
+      color: #6591e2;
+      text-decoration: none;
+      padding-right: 20px;
+    }
+
+    .wishlist {
+      font: bold 12px Helvetica Neue, sans-serif;
+      color: #6591e2;
+      text-decoration: none;
+    }
+
+    .share:hover, .wishlist:hover {
+      text-decoration: underline;
+    }
+
+    .underArtLinks {
+      padding-bottom: 20px;
+    }
+
+    .supportSection {
+      padding-bottom: 10px;
+    }
   </style>
 
   <link rel="stylesheet" type="text/css" media="screen" href="./mainStyle.css">
@@ -21,23 +52,24 @@
   <link rel="stylesheet" type="text/css" media="screen" href="http://localhost:3003/style.css">
 </head>
 <body style= "background: #E9D3B3">
+  <div class="center">
+    <div class="container" id="MediaPlayer"></div>
 
-  <div id="MediaPlayer"></div>
-
-  <div class="col2">
-    <div></div>
-      <img class="mainAlbumArt"
-      height="350px"
-      width="350px"
-      src="https://s3.us-east-2.amazonaws.com/id12c4xzkv5chxzkcv4/supportersPictures/albumart.jpg">
-      <br>
-      <a class="share" href="">Share / Embed</a>
-      <a class="wishlist" href="">Wishlist</a>
+    <div class="container">
+        <img class="mainAlbumArt"
+        height="350px"
+        width="350px"
+        src="https://s3.us-east-2.amazonaws.com/id12c4xzkv5chxzkcv4/supportersPictures/albumart.jpg">
+        <br>
+        <div class="underArtLinks">
+        <a class="share" href="">Share / Embed</a>
+        <a class="wishlist" href="">Wishlist</a>
+        </div>
+        <div class="supportSection" id="SupportedBy"></div>
+    </div>
   </div>
-    <div id="SupportedBy"></div>
-  </div>
 
-  <div id="RelatedAlbums"></div>
+  <div class="related" id="RelatedAlbums"></div>
 
   <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
