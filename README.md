@@ -8,6 +8,7 @@ MODULES
 Related Albums Module
 - once in the modules directory, cd into the related-albums directory.
 IMPORTANT: Make sure to run all the following scrips in the proper directory (./modules/related-albums)
+- run `npm install`
 - run `npm run react-dev` to start bundling
 - run `npm start` to start server
 - run `npm run seed-data` to seed data to mongo database
@@ -15,6 +16,7 @@ IMPORTANT: Make sure to run all the following scrips in the proper directory (./
 Supported By Module
 - from the modules directory, cd into the supported-by directory.
 IMPORTANT: Make sure to run all the following scrips in the proper directory (./modules/supported-by)
+- run `npm install`
 - run `npm run react-dev` to start bundling
 - run `npm run server-dev` to start server
 - run `npm run seed` to seed data to mongo database
@@ -22,6 +24,7 @@ IMPORTANT: Make sure to run all the following scrips in the proper directory (./
 Media Player Module
 - from the modules directory, cd into the supported-by directory.
 IMPORTANT: Make sure to run all the following scrips in the proper directory (./modules/supported-by)
+- run `npm install`
 - run `npm run build` to start bundling
 - run `npm start` to start server
 - run `npm run seed` to seed data to mongo database
