@@ -16,7 +16,7 @@
 #### IMPORTANT: Make sure to run all the following scrips in the proper directory (./modules/supported-by)
 - run `npm install`
 - run `npm run seed` to seed data to mongo database
-- run `npm run server-dev` to start server
+- run `npm run start` to start server
 
 ### Media Player Module
 - from the modules directory, cd into the supported-by directory.
