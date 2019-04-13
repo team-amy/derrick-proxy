@@ -2,104 +2,75 @@
 <html lang="en">
   <head>
 
-    <title>bandland</title>
-
-    <style>
-
-      .center {
-        display: flex;
-        background-color: #3858ad;
-        width: 756px;
-        min-height: 100%;
-        margin: 0 auto;
-      }
-
-      .mainAlbumArt {
-        padding-top: 20px;
-      }
-
-      .share {
-        font: bold 12px Helvetica Neue, sans-serif;
-        color: #6591e2;
-        text-decoration: none;
-        padding-right: 20px;
-      }
-
-      .wishlist {
-        font: bold 12px Helvetica Neue, sans-serif;
-        color: #6591e2;
-        text-decoration: none;
-      }
-
-      .share:hover, .wishlist:hover {
-        text-decoration: underline;
-      }
-
-      .underArtLinks {
-        padding-bottom: 20px;
-      }
-
-      .supportSection {
-        padding-bottom: 10px;
-      }
-
-    </style>
-
-    <link rel="stylesheet" type="text/css" media="screen" href="./mainStyle.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="http://localhost:3001/reset.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="http://localhost:3001/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://s3.us-east-2.amazonaws.com/album-art-bandland/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://s3.us-east-2.amazonaws.com/album-art-bandland/main.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="http://localhost:3003/style.css">
+    <link rel="stylesheet" type="text/css" href="https://s3.us-east-2.amazonaws.com/id12c4xzkv5chxzkcv4/style.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost:3000/search.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost:3000/main-styles.css">
+
+    <title>bandland</title>
   </head>
+
   <body style= "background: #E9D3B3">
-    <div class="center">
-      <div id="MediaPlayer"></div>
-        <div>
-          <img class="mainAlbumArt"
-          height="350px"
-          width="350px"
-          src="https://s3.us-east-2.amazonaws.com/id12c4xzkv5chxzkcv4/supportersPictures/albumart.jpg">
-          <br>
+      <!-- Nav-bar -->
+    <header class="nav-bar">
+      <div class="left-nav-bar">
+        <img class="logo" src="https://s3.us-east-2.amazonaws.com/album-art-bandland/bandland-logo.png">
+        <div class="search-container">
+          <input class="search-input"" type=" text" placeholder="Search and discover music">
+          <img class="search-img" src="http://cdn.onlinewebfonts.com/svg/img_469993.png">
+        </div>
+      </div>
+      <div class="right-nav-bar">
+        <div class="sign-up">
+          <span>sign up</span>
+        </div>
+        <div class="log-in">
+            <span>log in</span>
+        </div>
+      </div>
+    </header>
+    <!-- Main Container -->
+    <div id="mainContainer">
+      <div class="gradient-divider"></div>
+      <div id="mediaPlayer"></div>
+      <div>
+        <img class="mainAlbumArt" src="https://s3.us-east-2.amazonaws.com/id12c4xzkv5chxzkcv4/supportersPictures/albumart.jpg">
           <div class="underArtLinks">
-            <span><a href=""><img src="https://s3.us-east-2.amazonaws.com/id12c4xzkv5chxzkcv4/supportersPictures/share.png" height="12px" width="12px"></a></span>
-
+            <span>
+              <img class="share-img" src="https://s3.us-east-2.amazonaws.com/id12c4xzkv5chxzkcv4/supportersPictures/share.png">
+            </span>
             <a class="share" href="">Share / Embed</a>
-
-            <span><a href=""><img src="https://s3.us-east-2.amazonaws.com/id12c4xzkv5chxzkcv4/supportersPictures/heart.png" height="11px" width="11px"></a></span>
-
+            <span>
+              <img class="heart-img" src="https://s3.us-east-2.amazonaws.com/id12c4xzkv5chxzkcv4/supportersPictures/heart.png">
+            </span>
             <a class="wishlist" href="">Wishlist</a>
           </div>
-          <div class="supportSection" id="SupportedBy"></div>
+          <div class="supportSection" id="fans"></div>
         </div>
-    </div>
-
-    <div class="related" id="RelatedAlbums"></div>
-
-    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script src="http://localhost:3001/bundle.js"></script>
-    <script src="http://localhost:3002/bundle.js"></script>
-    <script src="http://localhost:3003/bundle.js"></script>
-
-    <script>
+      <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+      <script src="https://s3.amazonaws.com/namfecproject/bundle.js"></script>
+      <script src="https://s3.us-east-2.amazonaws.com/id12c4xzkv5chxzkcv4/bundle.js"></script>
+      <script src="https://s3.us-east-2.amazonaws.com/album-art-bandland/bundle.js"></script>
+      <script>
         ReactDOM.render(
           React.createElement(Music),
-          document.getElementById('MediaPlayer')
+          document.getElementById("mediaPlayer")
         );
-    </script>
-
-    <script>
         ReactDOM.render(
           React.createElement(SupportSection),
-          document.getElementById('SupportedBy')
+          document.getElementById("fans")
         );
-    </script>
-
+      </script>
+    </div>
+    <div id="recommended"></div>
     <script>
-        ReactDOM.render(
-          React.createElement(RecommendedAlbumsApp),
-          document.getElementById('RelatedAlbums')
-        );
+      ReactDOM.render(
+        React.createElement(RecommendedAlbumsApp),
+        document.getElementById("recommended")
+      );
     </script>
   </body>
 </html>
