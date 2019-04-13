@@ -73,3 +73,12 @@
 .thumbnails > :first-child {
   margin: 0 3px 7px 0px;
 }
+
+.thumbnails > :nth-child(11) {
+  margin: 0 3px 7px 0px;
+}
+
+.thumbnails > :nth-child(11) span {
+  display: flex;
+  flex-flow: column;
+}
